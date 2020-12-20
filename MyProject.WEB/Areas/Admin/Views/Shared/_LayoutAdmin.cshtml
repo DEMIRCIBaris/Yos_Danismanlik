@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="~/AdminTheme/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="~/AdminTheme/css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="~/AdminTheme/css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="~/AdminTheme/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- full calendar css-->
+    <link href="~/AdminTheme/assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
+    <link href="~/AdminTheme/assets/fullcalendar/fullcalendar/fullcalendar.css" rel="stylesheet" />
+    <!-- easy pie chart-->
+    <link href="~/AdminTheme/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen" />
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="~/AdminTheme/css/owl.carousel.css" type="text/css">
+    <link href="~/AdminTheme/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="~/AdminTheme/css/fullcalendar.css">
+    <link href="~/AdminTheme/css/widgets.css" rel="stylesheet">
+    <link href="~/AdminTheme/css/style.css" rel="stylesheet">
+    <link href="~/AdminTheme/css/style-responsive.css" rel="stylesheet" />
+    <link href="~/AdminTheme/css/xcharts.min.css" rel=" stylesheet">
+    <link href="~/AdminTheme/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <section id="container">
+        <!--header start-->
+        @await Component.InvokeAsync("NavbarComponents")
+        <!--header end-->
+
+        <!--sidebar start-->
+        @await Component.InvokeAsync("SidebarComponents")
+        <!--sidebar end-->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+                @RenderBody()
+            </section>
+        </section>
+        <!--main content end-->
+
+
+    </section>
+    @RenderSection("Scripts", required: false)
+
+    <!-- javascripts -->
+    <script src="~/AdminTheme/js/jquery.js"></script>
+    <script src="~/AdminTheme/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="~/AdminTheme/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="~/AdminTheme/js/jquery-ui-1.9.2.custom.min.js"></script>
+    <!-- bootstrap -->
+    <script src="~/AdminTheme/js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="~/AdminTheme/js/jquery.scrollTo.min.js"></script>
+    <script src="~/AdminTheme/js/jquery.nicescroll.js" type="text/javascript"></script>
+    <!-- charts scripts -->
+    <script src="~/AdminTheme/assets/jquery-knob/js/jquery.knob.js"></script>
+    <script src="~/AdminTheme/js/jquery.sparkline.js" type="text/javascript"></script>
+    <script src="~/AdminTheme/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js"></script>
+    <script src="~/AdminTheme/js/owl.carousel.js"></script>
+    <!-- jQuery full calendar -->
+    <script src="~/AdminTheme/js/fullcalendar.min.js"></script>
+    <!-- Full Google Calendar - Calendar -->
+    <script src="~/AdminTheme/assets/fullcalendar/fullcalendar/fullcalendar.js"></script>
+    <!--script for this page only-->
+    <script src="~/AdminTheme/js/calendar-custom.js"></script>
+    <script src="~/AdminTheme/js/jquery.rateit.min.js"></script>
+    <!-- custom select -->
+    <script src="~/AdminTheme/js/jquery.customSelect.min.js"></script>
+    <script src="~/AdminTheme/assets/chart-master/Chart.js"></script>
+
+    <!--custome script for all page-->
+    <script src="~/AdminTheme/js/scripts.js"></script>
+    <!-- custom script for this page-->
+    <script src="~/AdminTheme/js/sparkline-chart.js"></script>
+    <script src="~/AdminTheme/js/easy-pie-chart.js"></script>
+    <script src="~/AdminTheme/js/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="~/AdminTheme/js/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="~/AdminTheme/js/xcharts.min.js"></script>
+    <script src="~/AdminTheme/js/jquery.autosize.min.js"></script>
+    <script src="~/AdminTheme/js/jquery.placeholder.min.js"></script>
+    <script src="~/AdminTheme/js/gdp-data.js"></script>
+    <script src="~/AdminTheme/js/morris.min.js"></script>
+    <script src="~/AdminTheme/js/sparklines.js"></script>
+    <script src="~/AdminTheme/js/charts.js"></script>
+    <script src="~/AdminTheme/js/jquery.slimscroll.min.js"></script>
+</body>
+</html>

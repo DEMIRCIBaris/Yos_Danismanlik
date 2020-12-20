@@ -1,0 +1,392 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.WEB\\MyProject.WEB.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Bussiness\\MyProject.Bussiness.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Bussiness\\MyProject.Bussiness.csproj",
+        "projectName": "MyProject.Bussiness",
+        "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Bussiness\\MyProject.Bussiness.csproj",
+        "packagesPath": "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Bussiness\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Barış DEMİRCİ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Core\\MyProject.Core.csproj": {
+                "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Core\\MyProject.Core.csproj"
+              },
+              "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.DataAccess\\MyProject.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.DataAccess\\MyProject.DataAccess.csproj"
+              },
+              "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Entities\\MyProject.Entities.csproj": {
+                "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Entities\\MyProject.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Core\\MyProject.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Core\\MyProject.Core.csproj",
+        "projectName": "MyProject.Core",
+        "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Core\\MyProject.Core.csproj",
+        "packagesPath": "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Barış DEMİRCİ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.DataAccess\\MyProject.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.DataAccess\\MyProject.DataAccess.csproj",
+        "projectName": "MyProject.DataAccess",
+        "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.DataAccess\\MyProject.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Barış DEMİRCİ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Core\\MyProject.Core.csproj": {
+                "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Core\\MyProject.Core.csproj"
+              },
+              "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Entities\\MyProject.Entities.csproj": {
+                "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Entities\\MyProject.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Entities\\MyProject.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Entities\\MyProject.Entities.csproj",
+        "projectName": "MyProject.Entities",
+        "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Entities\\MyProject.Entities.csproj",
+        "packagesPath": "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Barış DEMİRCİ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Core\\MyProject.Core.csproj": {
+                "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Core\\MyProject.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.WEB\\MyProject.WEB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.WEB\\MyProject.WEB.csproj",
+        "projectName": "MyProject.WEB",
+        "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.WEB\\MyProject.WEB.csproj",
+        "packagesPath": "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.WEB\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Barış DEMİRCİ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Bussiness\\MyProject.Bussiness.csproj": {
+                "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Bussiness\\MyProject.Bussiness.csproj"
+              },
+              "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.DataAccess\\MyProject.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.DataAccess\\MyProject.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

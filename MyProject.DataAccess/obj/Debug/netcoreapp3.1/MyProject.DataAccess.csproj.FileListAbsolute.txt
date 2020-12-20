@@ -1,0 +1,17 @@
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\bin\Debug\netcoreapp3.1\MyProject.DataAccess.deps.json
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\bin\Debug\netcoreapp3.1\MyProject.DataAccess.runtimeconfig.json
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\bin\Debug\netcoreapp3.1\MyProject.DataAccess.runtimeconfig.dev.json
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\bin\Debug\netcoreapp3.1\MyProject.DataAccess.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\bin\Debug\netcoreapp3.1\MyProject.DataAccess.pdb
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\bin\Debug\netcoreapp3.1\MyProject.Core.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\bin\Debug\netcoreapp3.1\MyProject.Entities.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\bin\Debug\netcoreapp3.1\MyProject.Core.pdb
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\bin\Debug\netcoreapp3.1\MyProject.Entities.pdb
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\obj\Debug\netcoreapp3.1\MyProject.DataAccess.csprojAssemblyReference.cache
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\obj\Debug\netcoreapp3.1\MyProject.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\obj\Debug\netcoreapp3.1\MyProject.DataAccess.AssemblyInfo.cs
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\obj\Debug\netcoreapp3.1\MyProject.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\obj\Debug\netcoreapp3.1\MyProject.DataAccess.csproj.CopyComplete
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\obj\Debug\netcoreapp3.1\MyProject.DataAccess.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\obj\Debug\netcoreapp3.1\MyProject.DataAccess.pdb
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.DataAccess\obj\Debug\netcoreapp3.1\MyProject.DataAccess.genruntimeconfig.cache

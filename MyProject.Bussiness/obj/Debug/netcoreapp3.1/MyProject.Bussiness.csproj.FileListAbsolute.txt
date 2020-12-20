@@ -1,0 +1,16 @@
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\bin\Debug\netcoreapp3.1\MyProject.Bussiness.deps.json
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\bin\Debug\netcoreapp3.1\MyProject.Bussiness.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\bin\Debug\netcoreapp3.1\MyProject.Bussiness.pdb
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\bin\Debug\netcoreapp3.1\MyProject.Core.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\bin\Debug\netcoreapp3.1\MyProject.DataAccess.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\bin\Debug\netcoreapp3.1\MyProject.Entities.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\bin\Debug\netcoreapp3.1\MyProject.Core.pdb
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\bin\Debug\netcoreapp3.1\MyProject.DataAccess.pdb
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\bin\Debug\netcoreapp3.1\MyProject.Entities.pdb
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\obj\Debug\netcoreapp3.1\MyProject.Bussiness.csprojAssemblyReference.cache
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\obj\Debug\netcoreapp3.1\MyProject.Bussiness.AssemblyInfoInputs.cache
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\obj\Debug\netcoreapp3.1\MyProject.Bussiness.AssemblyInfo.cs
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\obj\Debug\netcoreapp3.1\MyProject.Bussiness.csproj.CoreCompileInputs.cache
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\obj\Debug\netcoreapp3.1\MyProject.Bussiness.csproj.CopyComplete
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\obj\Debug\netcoreapp3.1\MyProject.Bussiness.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Bussiness\obj\Debug\netcoreapp3.1\MyProject.Bussiness.pdb

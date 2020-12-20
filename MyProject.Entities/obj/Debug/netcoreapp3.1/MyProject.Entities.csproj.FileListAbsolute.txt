@@ -1,0 +1,12 @@
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Entities\bin\Debug\netcoreapp3.1\MyProject.Entities.deps.json
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Entities\bin\Debug\netcoreapp3.1\MyProject.Entities.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Entities\bin\Debug\netcoreapp3.1\MyProject.Entities.pdb
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Entities\bin\Debug\netcoreapp3.1\MyProject.Core.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Entities\bin\Debug\netcoreapp3.1\MyProject.Core.pdb
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Entities\obj\Debug\netcoreapp3.1\MyProject.Entities.csprojAssemblyReference.cache
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Entities\obj\Debug\netcoreapp3.1\MyProject.Entities.AssemblyInfoInputs.cache
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Entities\obj\Debug\netcoreapp3.1\MyProject.Entities.AssemblyInfo.cs
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Entities\obj\Debug\netcoreapp3.1\MyProject.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Entities\obj\Debug\netcoreapp3.1\MyProject.Entities.csproj.CopyComplete
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Entities\obj\Debug\netcoreapp3.1\MyProject.Entities.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Entities\obj\Debug\netcoreapp3.1\MyProject.Entities.pdb

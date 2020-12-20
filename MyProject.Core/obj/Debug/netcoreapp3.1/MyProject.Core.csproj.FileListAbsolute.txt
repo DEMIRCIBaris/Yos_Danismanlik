@@ -1,0 +1,8 @@
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Core\bin\Debug\netcoreapp3.1\MyProject.Core.deps.json
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Core\bin\Debug\netcoreapp3.1\MyProject.Core.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Core\bin\Debug\netcoreapp3.1\MyProject.Core.pdb
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Core\obj\Debug\netcoreapp3.1\MyProject.Core.AssemblyInfoInputs.cache
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Core\obj\Debug\netcoreapp3.1\MyProject.Core.AssemblyInfo.cs
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Core\obj\Debug\netcoreapp3.1\MyProject.Core.csproj.CoreCompileInputs.cache
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Core\obj\Debug\netcoreapp3.1\MyProject.Core.dll
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.Core\obj\Debug\netcoreapp3.1\MyProject.Core.pdb
