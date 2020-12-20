@@ -21,7 +21,7 @@
                 </a>
             </li>
             <li class="@(controllerName=="yosquota"?"active":"")">
-                <a href="yös_kontejyanları.html" class="">
+                <a asp-controller="YosQuota" asp-action="Index" class="">
                     <i class="icon_desktop"></i>
                     <span>YÖS Kontenjanları</span>
                 </a>
@@ -33,9 +33,9 @@
                 </a>
             </li>
             <li class="@(controllerName=="students"?"active":"")">
-                <a class="" href="kayıt_bilgileri.html">
+                <a asp-controller="Students" asp-action="Index" class="">
                     <i class="icon_piechart"></i>
-                    <span>Kayıt Bilgiler  i</span> 
+                    <span>Kayıt Bilgileri</span> 
 
                 </a>
 

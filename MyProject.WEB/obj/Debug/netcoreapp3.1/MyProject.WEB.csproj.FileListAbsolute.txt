@@ -176,3 +176,5 @@ C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3
 C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\MyProject.WEB.dll
 C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\MyProject.WEB.pdb
 C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\MyProject.WEB.genruntimeconfig.cache
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\YosQuota\Index.cshtml.g.cs
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Students\Index.cshtml.g.cs

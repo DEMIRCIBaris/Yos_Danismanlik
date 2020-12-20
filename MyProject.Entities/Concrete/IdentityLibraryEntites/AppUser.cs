@@ -11,5 +11,7 @@ namespace MyProject.Entities.Concrete.IdentityLibraryEntites
         public string Name { get; set; }
         public string Surname { get; set; }
         public string Picture { get; set; }
+
+        public List<University> Universities { get; set; }
     }
 }

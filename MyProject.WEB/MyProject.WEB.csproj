@@ -24,7 +24,6 @@
     <Folder Include="Areas\Member\Models\" />
     <Folder Include="Areas\Member\Views\" />
     <Folder Include="Models\" />
-    <Folder Include="wwwroot\" />
   </ItemGroup>
 
 </Project>

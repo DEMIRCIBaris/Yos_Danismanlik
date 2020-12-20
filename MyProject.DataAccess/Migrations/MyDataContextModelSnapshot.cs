@@ -19,6 +19,21 @@ namespace MyProject.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
+            modelBuilder.Entity("AppUserUniversity", b =>
+                {
+                    b.Property<int>("UniversitiesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UsersId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UniversitiesId", "UsersId");
+
+                    b.HasIndex("UsersId");
+
+                    b.ToTable("AppUserUniversity");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.Property<int>("Id")
@@ -118,6 +133,22 @@ namespace MyProject.DataAccess.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.City", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Cities");
                 });
 
             modelBuilder.Entity("MyProject.Entities.Concrete.IdentityLibraryEntites.AppRole", b =>
@@ -227,6 +258,76 @@ namespace MyProject.DataAccess.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("MyProject.Entities.Concrete.University", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("BasvuruTarih")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CityId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<string>("PictureUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("SinavTarihi")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("SonucTarihi")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UniversityTypeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CityId");
+
+                    b.HasIndex("UniversityTypeId");
+
+                    b.ToTable("Universities");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.UniversityType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UniversityTypes");
+                });
+
+            modelBuilder.Entity("AppUserUniversity", b =>
+                {
+                    b.HasOne("MyProject.Entities.Concrete.University", null)
+                        .WithMany()
+                        .HasForeignKey("UniversitiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyProject.Entities.Concrete.IdentityLibraryEntites.AppUser", null)
+                        .WithMany()
+                        .HasForeignKey("UsersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.HasOne("MyProject.Entities.Concrete.IdentityLibraryEntites.AppRole", null)
@@ -276,6 +377,35 @@ namespace MyProject.DataAccess.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.University", b =>
+                {
+                    b.HasOne("MyProject.Entities.Concrete.City", "City")
+                        .WithMany("Universities")
+                        .HasForeignKey("CityId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyProject.Entities.Concrete.UniversityType", "UniversityType")
+                        .WithMany("Universities")
+                        .HasForeignKey("UniversityTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("City");
+
+                    b.Navigation("UniversityType");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.City", b =>
+                {
+                    b.Navigation("Universities");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.UniversityType", b =>
+                {
+                    b.Navigation("Universities");
                 });
 #pragma warning restore 612, 618
         }

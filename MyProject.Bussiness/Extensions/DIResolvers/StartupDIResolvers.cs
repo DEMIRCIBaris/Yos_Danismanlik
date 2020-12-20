@@ -13,6 +13,8 @@ namespace MyProject.Bussiness.Extensions.DIResolvers
             services.AddScoped<IAppUserService, AppUserService>();
             services.AddScoped<IAppUserDal, EfAppUserDal>();
             services.AddScoped<IMapperService, MapperService>();
+            services.AddScoped<IUniversityService, UniversityService>();
+            services.AddScoped<IUniversityDal, EfUniversityDal>();
         }
     }
 }

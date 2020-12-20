@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyProject.DataAccess.Concrete.EntityFramework.Mapping;
+using MyProject.Entities.Concrete;
 using MyProject.Entities.Concrete.IdentityLibraryEntites;
 
 namespace MyProject.DataAccess.Concrete.EntityFramework.Context
@@ -16,8 +17,15 @@ namespace MyProject.DataAccess.Concrete.EntityFramework.Context
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.ApplyConfiguration(new AppUserMap());
+            builder.ApplyConfiguration(new UniversitiesMap());
+            builder.ApplyConfiguration(new CityMap());
+            builder.ApplyConfiguration(new UniversityTypeMap());
             base.OnModelCreating(builder);
         }
+
+        public DbSet<University> Universities { get; set; }
+        public DbSet<City> Cities { get; set; }
+        public DbSet<UniversityType> UniversityTypes { get; set; }
 
     }
 }
