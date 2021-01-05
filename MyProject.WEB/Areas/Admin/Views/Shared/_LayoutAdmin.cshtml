@@ -6,7 +6,8 @@
     <title>@ViewBag.Title</title>
 
     <!-- Bootstrap CSS -->
-    <link href="~/AdminTheme/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <!-- bootstrap theme -->
     <link href="~/AdminTheme/css/bootstrap-theme.css" rel="stylesheet">
     <!--external css-->
@@ -28,14 +29,15 @@
     <link href="~/AdminTheme/css/style-responsive.css" rel="stylesheet" />
     <link href="~/AdminTheme/css/xcharts.min.css" rel=" stylesheet">
     <link href="~/AdminTheme/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+    <link href="~/AdminTheme/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="~/AdminTheme/css/daterangepicker.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 <body>
     <section id="container">
         <!--header start-->
-        @await Component.InvokeAsync("NavbarComponents")
+        @await Component.InvokeAsync("MyProject.WEB.Areas.Admin.ViewComponents.NavbarComponents")
         <!--header end-->
-
         <!--sidebar start-->
         @await Component.InvokeAsync("SidebarComponents")
         <!--sidebar end-->
@@ -49,8 +51,6 @@
 
 
     </section>
-    @RenderSection("Scripts", required: false)
-
     <!-- javascripts -->
     <script src="~/AdminTheme/js/jquery.js"></script>
     <script src="~/AdminTheme/js/jquery-ui-1.10.4.min.js"></script>
@@ -92,5 +92,8 @@
     <script src="~/AdminTheme/js/sparklines.js"></script>
     <script src="~/AdminTheme/js/charts.js"></script>
     <script src="~/AdminTheme/js/jquery.slimscroll.min.js"></script>
+    <script src="~/AdminTheme/js/daterangepicker.js"></script>
+    <script src="~/AdminTheme/js/bootstrap-datepicker.js"></script>
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

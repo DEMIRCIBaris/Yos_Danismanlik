@@ -135,6 +135,38 @@ namespace MyProject.DataAccess.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("MyProject.Entities.Concrete.BasePoint", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("FirstCities")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("SecondCities")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("ThirdCities")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("basePoints");
+                });
+
             modelBuilder.Entity("MyProject.Entities.Concrete.City", b =>
                 {
                     b.Property<int>("Id")
@@ -285,6 +317,9 @@ namespace MyProject.DataAccess.Migrations
                     b.Property<DateTime>("SonucTarihi")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("URL")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("UniversityTypeId")
                         .HasColumnType("int");
 
@@ -311,6 +346,59 @@ namespace MyProject.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("UniversityTypes");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.YosQuestions", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("DocumentUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("yosQuestions");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.YosQuota", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Departments")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Quota")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("Time")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("UniversityName")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("YosQuotas");
                 });
 
             modelBuilder.Entity("AppUserUniversity", b =>

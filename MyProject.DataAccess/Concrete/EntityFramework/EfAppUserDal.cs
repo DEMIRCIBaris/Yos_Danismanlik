@@ -19,5 +19,14 @@ namespace MyProject.DataAccess.Concrete.EntityFramework
                 return universities;
             }
         }
+
+        public int UserCount()
+        {
+            using (var dB = new MyDataContext())
+            {
+                var usersCount = dB.Users.Count() - 1;
+                return usersCount;
+            }
+        }
     }
 }

@@ -19,8 +19,50 @@ using MyProject.Entities.DTO.AppUserDTO;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.YosQuestionsDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.YosQuotaDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.BasePointDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.UniversityDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.UniversityTypeDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Views\_ViewImports.cshtml"
+using MyProject.WEB.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1d88e3544759b886af202bd4432e21aae69f6d0a", @"/Views/Home/AccessDenied.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7a4f587e9e2888d089c567a350103d8cd8a8aea0", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2acc3b879e8c8618436616faa6231eece55d342b", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_AccessDenied : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

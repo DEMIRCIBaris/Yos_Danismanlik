@@ -1,0 +1,62 @@
+﻿@model List<YosQuestionsGetDto>
+
+<main id="main" class="gecici-background">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+            <h2 class="section-title">YÖS Soruları</h2>
+            <div class="text-left">
+                <p>
+                    <b> YÖS Soruları </b> ve YÖS Konuları üniversiteden üniversiteye <b> değişiklikler </b> göstermektedir. Ancak konular tahmin ve kategorize edilebilir.
+                    YÖS  adayları YÖS Sınavının başlangıçlarında merkezi bir sınava girmek zorundalarken, üniversiteler kendi sınavlarını yapmaktadırlar. Bazı üniversitelerin sınavları diğer üniversitelerde de sayılmaktadır.
+                    Sizlere YÖS Soruları’na göz atabilmeniz için, farklı üniversitelerin yapmış olduğu sınavları ve sorularını bir araya getirdik..
+                </p>
+
+                <img src="~/MemberTheme/img/yosQuestions.png" class="rounded mx-auto d-block mb-5" alt="yös Şartları" style="height:40%; width:40%;">
+
+                <h3 class="section-title-left"><b> Çıkmış YÖS Sınavları ve Soruları </b> </h3>
+
+                @if (Model.Count() == 0)
+                {
+                    <p class="text-danger"><i class="fas fa-times mr-2"></i> Herhangi bir üniversiteye ait soru bulunamamıştır</p>
+                }
+                else
+                {
+                    <table class="table table-dark table-sm table-hover">
+                        <thead>
+                            <tr>
+                                <th>Soru Başlığı</th>
+                                <th>Yükleme Zamanı</th>
+                                <th>Dosya</th>
+                            </tr>
+                        </thead>
+                        <tbody class="my-auto">
+                            @foreach (var question in Model)
+                            {
+                                <tr>
+                                    <td>@question.Name</td>
+                                    <td>@question.UpdateDate</td>
+                                    <td>
+                                        <a asp-action="DownloadFile" asp-route-id="@question.Id"><i class="fas fa-file-pdf mr-2"></i>Indir</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+
+
+
+
+            </div>
+
+
+        </div>
+    </section><!-- End Skills Section -->
+
+
+
+
+</main><!-- End #main -->

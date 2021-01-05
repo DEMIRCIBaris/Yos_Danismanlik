@@ -8,5 +8,6 @@ namespace MyProject.Bussiness.Abstract
     public interface IAppUserService
     {
         List<University> GetUniversityListByStudentId(int studentId);
+        int UserCount();
     }
 }

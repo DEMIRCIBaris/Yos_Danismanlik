@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "f7gfnD419hq8Kkx8hvX0d+9UHznQZc9QgmJZWppRHpEGAOmlWUQdbzQVdNwasvNPdswFXUi0sg0X7PUYp8ZUmQ==",
+  "dgSpecHash": "0CZNLy66C1y8lSSIzt6e/oHnOZywb3YuGFRkPfLYKD+SoVrqTzsIKBjKBqwK/ZW6CkjPqIk9wUee/iBskjBx6A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Barış DEMİRCİ\\Desktop\\MyProject\\MyProject.Core\\MyProject.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.1\\microsoft.aspnetcore.http.features.5.0.1.nupkg.sha512",
     "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.0\\microsoft.entityframeworkcore.5.0.0.nupkg.sha512",
     "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.0\\microsoft.entityframeworkcore.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.0\\microsoft.entityframeworkcore.analyzers.5.0.0.nupkg.sha512",
@@ -17,7 +18,8 @@
     "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512"
+    "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
+    "C:\\Users\\Barış DEMİRCİ\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512"
   ],
   "logs": []
 }

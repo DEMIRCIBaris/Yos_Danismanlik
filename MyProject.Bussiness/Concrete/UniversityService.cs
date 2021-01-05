@@ -39,6 +39,18 @@ namespace MyProject.Bussiness.Concrete
             return universities;
         }
 
+        public List<University> GetUniversityWithCityAndType()
+        {
+            var universities = universityDal.GetUniversityWithCityAndType();
+            return universities;
+        }
+
+        public List<University> GetUniversityWithQuery(int typeId, int cityId)
+        {
+            var universities = universityDal.GetUniversityWithQuery(typeId, cityId);
+            return universities;
+        }
+
         public void Update(University entity)
         {
             universityDal.Update(entity);

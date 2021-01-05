@@ -35,10 +35,23 @@
             <li class="@(controllerName=="students"?"active":"")">
                 <a asp-controller="Students" asp-action="Index" class="">
                     <i class="icon_piechart"></i>
-                    <span>Kayıt Bilgileri</span> 
+                    <span>Kayıt Bilgileri</span>
 
                 </a>
+            </li>
+            <li class="@(controllerName=="universitytypes"?"active":"")">
+                <a asp-controller="UniversityTypes" asp-action="Index" class="">
+                    <i class="icon_piechart"></i>
+                    <span>Üniversite Tipi</span>
 
+                </a>
+            </li>
+            <li class="@(controllerName=="basepoint"?"active":"")">
+                <a asp-controller="BasePoint" asp-action="Index" class="">
+                    <i class="icon_piechart"></i>
+                    <span>Taban Puanı</span>
+
+                </a>
             </li>
         </ul>
         <!-- sidebar menu end-->

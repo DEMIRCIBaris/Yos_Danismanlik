@@ -1,0 +1,49 @@
+﻿@{
+    var controllerName = this.ViewContext.RouteData.Values["controller"].ToString().ToLower();
+    var actionName = ViewContext.RouteData.Values["Action"].ToString().ToLower();
+}
+
+<header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+        <h1 class="logo active"><a href="index.html">YÖS</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class="@((controllerName=="static" && actionName=="about")?"active":"")">
+                <a asp-controller="Static" asp-action="About">
+                    <span>Hakkımızda</span> 
+                    </a>
+                </li>
+                <li class="@((controllerName=="static" && actionName=="yos")?"active":"")"><a asp-controller="Static" asp-action="Yos">YÖS</a></li>
+                <li class="p-0 my-2 ml-1">
+                    <button type="button" class="btn dropdown-toggle dropdown-toggle-split p-0 ml" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" asp-controller="Static" asp-action="WhatYos">YÖS nedir? </a>
+                        <a class="dropdown-item" asp-controller="Static" asp-action="YosRequirements">YÖS Şartları</a>
+                        <a class="dropdown-item" asp-area=""  asp-controller="YosQuestions" asp-action="Index" >YÖS Soruları</a>
+                        <a class="dropdown-item" asp-controller="Static" asp-action="yosExamSubjects">YÖS Sınav Konuları</a>
+                        <a class="dropdown-item" asp-controller="BasePoint" asp-action="Index">YÖS Taban Puanları</a>
+                        <a class="dropdown-item" asp-controller="YosQuota" asp-action="Index">2018 YÖS Kontenjanları</a>
+                    </div>
+                </li>
+                <li class="@(controllerName=="University"?"active":"")"><a asp-controller="Universities" asp-action="Index">Üniversiteler</a></li>
+                <li class="@(controllerName=="profile"?"active":"")"><a asp-controller="Profile" asp-action="Index">Profil</a></li>
+                <li class="@(controllerName=="contact"?"active":"")"><a asp-controller="Contact" asp-action="Index">İleitişim</a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+        <div class="header-social-links">
+            <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+            <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+            <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+        </div>
+
+    </div>
+
+</header><!-- End Header -->

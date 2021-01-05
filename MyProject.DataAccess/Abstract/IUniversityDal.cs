@@ -6,7 +6,9 @@ using System.Text;
 
 namespace MyProject.DataAccess.Abstract
 {
-   public interface IUniversityDal:IEntityRepository<University>
+   public interface IUniversityDal : IEntityRepository<University>
     {
+        List<University> GetUniversityWithCityAndType();
+        List<University> GetUniversityWithQuery(int typeId, int cityId);
     }
 }

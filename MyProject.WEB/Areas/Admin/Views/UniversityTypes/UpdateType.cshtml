@@ -1,0 +1,20 @@
+﻿@model UniversityTypeUpdateDto
+
+<form asp-action="UpdateType" method="post" class="w-75 mx-auto p-3 mt-2">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Üniversite Tipi</label>
+        <div class="col-sm-8">
+            <input type="text" asp-for="Name" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success btn-sm col-sm-2">Güncelle</button>
+        <span class="text-danger col-sm-12 text-center" asp-validation-for="Name"></span>
+    </div>
+
+</form>
+
+
+@section Scripts{
+    <script src="~/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

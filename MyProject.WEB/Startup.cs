@@ -48,15 +48,16 @@ namespace MyProject.WEB
 
             app.UseEndpoints(endpoints =>
             {
+              
                 endpoints.MapControllerRoute(
                     name:"areas",
                     pattern:"{area}/{controller=Home}/{action=Index}/{id?}"
                     );
 
                 endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Register}/{id?}"
-                    );
+                  name: "default",
+                  pattern: "{controller=Static}/{action=Index}/{id?}"
+                  );
             });
         }
     }

@@ -15,6 +15,8 @@ namespace MyProject.Entities.Concrete
         public DateTime SinavTarihi { get; set; }
         public DateTime SonucTarihi { get; set; }
 
+        public string URL { get; set; }
+
         public List<AppUser> Users { get; set; }
 
         public int CityId { get; set; }

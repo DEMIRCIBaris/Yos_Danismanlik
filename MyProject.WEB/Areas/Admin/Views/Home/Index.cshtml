@@ -1,8 +1,10 @@
-﻿<div class="row">
+﻿@model HomeInfo
+
+<div class="row">
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <div class="info-box blue-bg">
             <i class="fas fa-user-graduate"></i>
-            <div class="count">66</div>
+            <div class="count">@Model.StudentsCount</div>
             <div class="title">Öğrenci</div>
         </div>
         <!--/.info-box-->
@@ -12,7 +14,7 @@
     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
         <div class="info-box brown-bg">
             <i class="fas fa-university"></i>
-            <div class="count">75</div>
+            <div class="count">@Model.UniversitiesCount</div>
             <div class="title">Üniversite</div>
         </div>
         <!--/.info-box-->

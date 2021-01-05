@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProject.WEB", "MyProject.WEB\MyProject.WEB.csproj", "{6B51EF59-7700-42FC-A09B-550E9B3D27F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProject.WEB", "MyProject.WEB\MyProject.WEB.csproj", "{6B51EF59-7700-42FC-A09B-550E9B3D27F1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProject.DataAccess", "MyProject.DataAccess\MyProject.DataAccess.csproj", "{3B76F77B-7B0E-4DAF-B155-47D435B4771A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProject.DataAccess", "MyProject.DataAccess\MyProject.DataAccess.csproj", "{3B76F77B-7B0E-4DAF-B155-47D435B4771A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProject.Bussiness", "MyProject.Bussiness\MyProject.Bussiness.csproj", "{3E7C48B8-7F77-4FA4-966A-0E96A8D3DA6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProject.Bussiness", "MyProject.Bussiness\MyProject.Bussiness.csproj", "{3E7C48B8-7F77-4FA4-966A-0E96A8D3DA6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProject.Entities", "MyProject.Entities\MyProject.Entities.csproj", "{E3EDE018-1E9C-457E-B44F-BAFEE45618A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProject.Entities", "MyProject.Entities\MyProject.Entities.csproj", "{E3EDE018-1E9C-457E-B44F-BAFEE45618A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyProject.Core", "MyProject.Core\MyProject.Core.csproj", "{B0C9733F-C4E9-44F9-A206-508CE3670145}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyProject.Core", "MyProject.Core\MyProject.Core.csproj", "{B0C9733F-C4E9-44F9-A206-508CE3670145}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

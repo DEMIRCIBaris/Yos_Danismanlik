@@ -9,5 +9,6 @@ namespace MyProject.DataAccess.Abstract
     public interface IAppUserDal
     {
         List<University> GetUniversityListByStudentId(int studentId);
+        int UserCount();
     }
 }

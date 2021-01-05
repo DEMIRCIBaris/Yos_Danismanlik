@@ -1,1 +1,36 @@
-﻿<h1>Yos Kontejyan</h1>
+﻿@model List<YosQuotaGetDto>
+
+<a class="btn btn-info btn-sm my-3" asp-action="AddQuota"><i class="fas fa-plus mr-2"></i>Kontejyan Ekle</a>
+@if (Model.Count() == 0)
+{
+    <p class="text-danger"><i class="fas fa-times mr-2"></i> Herhangi bir üniversite kontejyanı bulunamamıştır</p>
+}
+else
+{
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>Üniversite Adı</th>
+                <th>Bölüm</th>
+                <th>Süre</th>
+                <th>Kontejyan</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="my-auto">
+            @foreach (var quota in Model)
+            {
+            <tr>
+                <td class="align-middle">@quota.UniversityName</td>
+                <td class="align-middle">@quota.Departments</td>
+                <td class="align-middle">@quota.Time</td>
+                <td class="align-middle">@quota.Quota</td>
+                <td class="align-middle">
+                    <a class="btn btn-success btn-sm my-1" asp-action="UpdateQuota" asp-route-id="@quota.Id"><i class="fas fa-edit mr-1"></i>Güncelle</a>
+                    <a class="btn btn-danger btn-sm my-1" asp-action="DeleteQuota" asp-route-id="@quota.Id"><i class="fas fa-trash mr-1"></i>Sil</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}

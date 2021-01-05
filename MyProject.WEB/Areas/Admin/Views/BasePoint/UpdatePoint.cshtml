@@ -1,0 +1,42 @@
+﻿@model BasePointUpdateDto
+
+
+<form asp-action="UpdatePoint" method="post" class="w-75 mx-auto p-3 mt-2">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label class="col-sm-2 control-label">Bölüm</label>
+        <div class="col-sm-8">
+            <input type="text" asp-for="Department" class="form-control">
+        </div>
+        <span class="text-danger col-sm-12 text-center" asp-validation-for="Department"></span>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">1.Derece Şehir</label>
+        <div class="col-sm-8">
+            <input type="text" asp-for="FirstCities" class="form-control">
+        </div>
+        <span class="text-danger col-sm-12 text-center" asp-validation-for="FirstCities"></span>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">2.Derece Şehir</label>
+        <div class="col-sm-8">
+            <input type="text" asp-for="SecondCities" class="form-control">
+        </div>
+        <span class="text-danger col-sm-12 text-center" asp-validation-for="SecondCities"></span>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">3.Derece Şehir</label>
+        <div class="col-sm-8">
+            <input type="text" asp-for="ThirdCities" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success btn-sm col-sm-2">Ekle</button>
+        <span class="text-danger col-sm-12 text-center" asp-validation-for="ThirdCities"></span>
+    </div>
+
+</form>
+
+
+@section Scripts{
+    <script src="~/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

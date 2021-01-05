@@ -19,8 +19,50 @@ using MyProject.Entities.DTO.AppUserDTO;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Areas\Admin\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.UniversityTypeDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Areas\Admin\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.UniversityDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Areas\Admin\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.YosQuestionsDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Areas\Admin\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.YosQuotaDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Areas\Admin\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.BasePointDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Areas\Admin\Views\_ViewImports.cshtml"
+using MyProject.WEB.Areas.Admin.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"671140db9bbc85c8269f901493b9a75a36bf34d4", @"/Areas/Admin/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7a4f587e9e2888d089c567a350103d8cd8a8aea0", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c1d485a7abe411286d8c6ae672979995e6ea7aec", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

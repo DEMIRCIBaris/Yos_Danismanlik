@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyProject.WEB.Areas.Admin.ViewComponents
 {
+
     public class NavbarComponents:ViewComponent
     {
         public IViewComponentResult Invoke()

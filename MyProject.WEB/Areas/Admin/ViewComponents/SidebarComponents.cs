@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyProject.WEB.Areas.Admin.ViewComponents
 {
+    [Area("Admin")]
     public class SidebarComponents:ViewComponent
     {
         public IViewComponentResult Invoke()

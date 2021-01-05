@@ -1,0 +1,31 @@
+﻿@model List<UniversityTypeGetDto>
+
+
+<a class="btn btn-info btn-sm my-3" asp-action="AddType"><i class="fas fa-plus mr-2"></i>Üniversite Tipi Ekle</a>
+@if (Model.Count() == 0)
+{
+    <p class="text-danger"><i class="fas fa-times mr-2"></i> Herhangi bir üniversite tipi bulunamamıştır</p>
+}
+else
+{
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var type in Model)
+            {
+                <tr>
+                    <td>@type.Name</td>
+                    <td>
+                        <a class="btn btn-success btn-sm my-1" asp-action="UpdateType" asp-route-id="@type.Id"><i class="fas fa-edit mr-1"></i>Güncelle</a>
+                        <a class="btn btn-danger btn-sm my-1" asp-action="DeleteType" asp-route-id="@type.Id"><i class="fas fa-trash mr-1"></i>Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

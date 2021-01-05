@@ -21,5 +21,10 @@ namespace MyProject.Bussiness.Concrete
             var universities = appUserDal.GetUniversityListByStudentId(studentId);
             return universities;
         }
+
+        public int UserCount()
+        {
+            return appUserDal.UserCount();
+        }
     }
 }

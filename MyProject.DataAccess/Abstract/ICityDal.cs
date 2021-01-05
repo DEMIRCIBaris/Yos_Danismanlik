@@ -8,5 +8,6 @@ namespace MyProject.DataAccess.Abstract
 {
     public interface ICityDal: IEntityRepository<City>
     {
+        List<City> GetOrderedNameCities();
     }
 }

@@ -1,0 +1,339 @@
+[
+
+  {
+    "d": "15",
+    "name": "BURDUR"
+  },
+  {
+    "d": "26",
+    "name": "ESKİŞEHİR"
+  },
+  {
+    "d": "18",
+    "name": "ÇANKIRI"
+  },
+  {
+    "d": "80",
+    "name": "OSMANİYE"
+  },
+  {
+    "d": "41",
+    "name": "KOCAELİ"
+  },
+  {
+    "d": "27",
+    "name": "GAZİANTEP"
+  },
+  {
+    "d": "31",
+    "name": "HATAY"
+  },
+  {
+    "d": "38",
+    "name": "KAYSERİ"
+  },
+  {
+    "d": "29",
+    "name": "GÜMÜŞHANE"
+  },
+  {
+    "d": "54",
+    "name": "SAKARYA"
+  },
+  {
+    "d": "16",
+    "name": "BURSA"
+  },
+  {
+    "d": "69",
+    "name": "BAYBURT"
+  },
+  {
+    "d": "17",
+    "name": "ÇANAKKALE"
+  },
+  {
+    "d": "57",
+    "name": "SİNOP"
+  },
+  {
+    "d": "74",
+    "name": "BARTIN"
+  },
+  {
+    "d": "503",
+    "name": "MAĞUSA (KIBRIS)"
+  },
+  {
+    "d": "33",
+    "name": "MERSİN"
+  },
+  {
+    "d": "51",
+    "name": "NİĞDE"
+  },
+  {
+    "d": "42",
+    "name": "KONYA"
+  },
+  {
+    "d": "60",
+    "name": "TOKAT"
+  },
+  {
+    "d": "2",
+    "name": "ADIYAMAN"
+  },
+  {
+    "d": "6",
+    "name": "ANKARA"
+  },
+  {
+    "d": "66",
+    "name": "YOZGAT"
+  },
+  {
+    "d": "52",
+    "name": "ORDU"
+  },
+  {
+    "d": "53",
+    "name": "RİZE"
+  },
+  {
+    "d": "1",
+    "name": "ADANA"
+  },
+  {
+    "d": "40",
+    "name": "KIRŞEHİR"
+  },
+  {
+    "d": "76",
+    "name": "IĞDIR"
+  },
+  {
+    "d": "45",
+    "name": "MANİSA"
+  },
+  {
+    "d": "21",
+    "name": "DİYARBAKIR"
+  },
+  {
+    "d": "64",
+    "name": "UŞAK"
+  },
+  {
+    "d": "501",
+    "name": "LEFKOŞE (KIBRIS)"
+  },
+  {
+    "d": "5",
+    "name": "AMASYA"
+  },
+  {
+    "d": "24",
+    "name": "ERZİNCAN"
+  },
+  {
+    "d": "32",
+    "name": "ISPARTA"
+  },
+  {
+    "d": "502",
+    "name": "GİRNE (KIBRIS)"
+  },
+  {
+    "d": "23",
+    "name": "ELAZIĞ"
+  },
+  {
+    "d": "78",
+    "name": "KARABÜK"
+  },
+  {
+    "d": "30",
+    "name": "HAKKARİ"
+  },
+  {
+    "d": "36",
+    "name": "KARS"
+  },
+  {
+    "d": "67",
+    "name": "ZONGULDAK"
+  },
+  {
+    "d": "68",
+    "name": "AKSARAY"
+  },
+  {
+    "d": "44",
+    "name": "MALATYA"
+  },
+  {
+    "d": "10",
+    "name": "BALIKESİR"
+  },
+  {
+    "d": "20",
+    "name": "DENİZLİ"
+  },
+  {
+    "d": "49",
+    "name": "MUŞ"
+  },
+  {
+    "d": "73",
+    "name": "ŞIRNAK"
+  },
+  {
+    "d": "48",
+    "name": "MUĞLA"
+  },
+  {
+    "d": "59",
+    "name": "TEKİRDAĞ"
+  },
+  {
+    "d": "39",
+    "name": "KIRKLARELİ"
+  },
+  {
+    "d": "56",
+    "name": "SİİRT"
+  },
+  {
+    "d": "28",
+    "name": "GİRESUN"
+  },
+  {
+    "d": "63",
+    "name": "ŞANLIURFA"
+  },
+  {
+    "d": "9",
+    "name": "AYDIN"
+  },
+  {
+    "d": "72",
+    "name": "BATMAN"
+  },
+  {
+    "d": "13",
+    "name": "BİTLİS"
+  },
+  {
+    "d": "3",
+    "name": "AFYONKARAHİSAR"
+  },
+  {
+    "d": "8",
+    "name": "ARTVİN"
+  },
+  {
+    "d": "4",
+    "name": "AĞRI"
+  },
+  {
+    "d": "77",
+    "name": "YALOVA"
+  },
+  {
+    "d": "50",
+    "name": "NEVŞEHİR"
+  },
+  {
+    "d": "61",
+    "name": "TRABZON"
+  },
+  {
+    "d": "58",
+    "name": "SİVAS"
+  },
+  {
+    "d": "7",
+    "name": "ANTALYA"
+  },
+  {
+    "d": "37",
+    "name": "KASTAMONU"
+  },
+  {
+    "d": "47",
+    "name": "MARDİN"
+  },
+  {
+    "d": "46",
+    "name": "KAHRAMANMARAŞ"
+  },
+  {
+    "d": "25",
+    "name": "ERZURUM"
+  },
+  {
+    "d": "75",
+    "name": "ARDAHAN"
+  },
+  {
+    "d": "81",
+    "name": "DÜZCE"
+  },
+  {
+    "d": "55",
+    "name": "SAMSUN"
+  },
+  {
+    "d": "19",
+    "name": "ÇORUM"
+  },
+  {
+    "d": "65",
+    "name": "VAN"
+  },
+  {
+    "d": "14",
+    "name": "BOLU"
+  },
+  {
+    "d": "43",
+    "name": "KÜTAHYA"
+  },
+  {
+    "d": "11",
+    "name": "BİLECİK"
+  },
+  {
+    "d": "34",
+    "name": "İSTANBUL"
+  },
+  {
+    "d": "79",
+    "name": "KİLİS"
+  },
+  {
+    "d": "62",
+    "name": "TUNCELİ"
+  },
+  {
+    "d": "12",
+    "name": "BİNGÖL"
+  },
+  {
+    "d": "22",
+    "name": "EDİRNE"
+  },
+  {
+    "d": "71",
+    "name": "KIRIKKALE"
+  },
+  {
+    "d": "70",
+    "name": "KARAMAN"
+  },
+  {
+    "d": "35",
+    "name": "İZMİR"
+  }
+]

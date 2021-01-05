@@ -1,1 +1,36 @@
-﻿<h1>Yos Soruları</h1>
+﻿@model List<YosQuestionsGetDto>
+
+<a class="btn btn-info btn-sm my-3" asp-action="AddQuestions"><i class="fas fa-plus mr-2"></i>Soru Ekle</a>
+@if (Model.Count() == 0)
+{
+    <p class="text-danger"><i class="fas fa-times mr-2"></i> Herhangi bir üniversiteye ait soru bulunamamıştır</p>
+}
+else
+{
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>Soru Başlığı</th>
+                <th>Yükleme Zamanı</th>
+                <th>Dosya</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody class="my-auto">
+            @foreach (var question in Model)
+            {
+                <tr>
+                    <td>@question.Name</td>
+                    <td>@question.UpdateDate</td>
+                    <td>
+                        <a asp-action="DownloadFile" asp-route-id="@question.Id"><i class="fas fa-file-pdf mr-2"></i>Indir</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-success btn-sm my-1" asp-action="UpdateQuestion" asp-route-id="@question.Id"><i class="fas fa-edit mr-1"></i>Güncelle</a>
+                        <a class="btn btn-danger btn-sm my-1" asp-action="DeleteQuestion" asp-route-id="@question.Id"><i class="fas fa-trash mr-1"></i>Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

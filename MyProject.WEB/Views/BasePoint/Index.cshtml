@@ -1,0 +1,71 @@
+﻿@model List<BasePointGetDto>
+
+<main id="main" class="gecici-background">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+            <h2 class="section-title">YÖS Taban Puanları</h2>
+            <div class="text-left">
+                <p>
+                    <b>YÖS Taban Puanları </b> her üniversite yönetimi tarafından farklı hesaplanmaktadır. Soruların dağılımı ve YÖS Puan değerleri farklılık göstermektedir.<br><br>
+                    YÖS-IQ ve  YÖS Matematik sorularının puan değerlendirmesi farklılık göstermektedir.<br><br>
+                    YÖS ile alınan bölümlerin değeri, üniversitelerin bulunduğu kente, dünya üniversite sıralama ‚ranking‘ değerlerine ve sahio olduğu kapasitelere göre değişmektedir.<br><br>
+                    Kentleri normal olarak sınıflandırırsak, büyük üniversiteler (İstanbul, Ankara, İzmir vb.) bulunduklaru konuma göre 3(üç) kategoriye ayrılırlar.<br><br>
+                </p>
+
+                <ol>
+                    <li>Derece Şehirler:</li>
+                    <ul>
+                        <li>İstanbul, Ankara, İzmir, Antalya, Bursa</li>
+                    </ul>
+                    <li>Derece Şehirler:</li>
+                    <ul>
+                        <li>Kocaeli, Sakarya, Samsun, Tekirdağ, Eskişehir, Adana, Gaziantep, Trabzon, Bolu, Çanakkale, Konya, Isparta</li>
+                    </ul>
+                    <li>Derece Şehirler:</li>
+                    <ul>
+                        <li>Erzurum, Van, Diyarbakır, Hatay, Kayseri, Malatya, Rize, Artvin, Kars, Çorum, Çankırı</li>
+                    </ul>
+                </ol> <br>
+
+                <h3 class="section-title-left"><b> YÖS Taban Puanları Listesi </b> </h3>
+                <p>Aşağıdaki listede sizlere Üniversitelerin Taban Puanları’nı 1. & 2. ve 3.Derece Şehirlere göre ayrılmıştır. YÖS Soru ve Puan sayısı 80 olarak baz alınmıştır.<br> <br></p>
+
+                @if (Model.Count() == 0)
+                {
+                    <p class="text-danger"><i class="fas fa-times mr-2"></i> Herhangi bir taban puanı bulunamamıştır</p>
+                }
+                else
+                {
+                    <table class="table table-dark table-striped table-sm table-hover">
+                        <thead>
+                            <tr>
+                                <th>Bölüm</th>
+                                <th>1.Derece Şehirler</th>
+                                <th>2.Derece Şehirler</th>
+                                <th>3.Derece Şehirler</th>
+                            </tr>
+                        </thead>
+                        <tbody class="my-auto">
+                            @foreach (var point in Model)
+                            {
+                                <tr>
+                                    <td class="align-middle">@point.Department</td>
+                                    <td class="align-middle">@point.FirstCities</td>
+                                    <td class="align-middle">@point.SecondCities</td>
+                                    <td class="align-middle">@point.ThirdCities</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+            </div>
+        </div>
+    </section><!-- End Skills Section -->
+
+
+
+
+</main><!-- End #main -->

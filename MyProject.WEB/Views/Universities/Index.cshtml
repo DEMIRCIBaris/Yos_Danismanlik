@@ -1,0 +1,87 @@
+﻿<main id="main" class="gecici-background">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+
+            <h2 class="section-title">Üniversiteler</h2> <br>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Şehir</label>
+                            <select class="form-control selectbox" asp-items="ViewBag.Cities">
+                                <option value="0">Şehir Seçiniz</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        @foreach (var item in ((List<UniversityTypeGetDto>)ViewBag.Type))
+                        {
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input checkbox"  type="checkbox" value="@item.Id">
+                                <label class="form-check-label" for="inlineCheckbox1">@item.Name</label>
+                            </div>
+                            <br>
+                        }
+                    </div>
+                    <br>
+                <div class="col-md-12">
+                    <div id="universities"></div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section><!-- End Skills Section -->
+</main><!-- End #main -->
+
+@section Scripts{ 
+
+    <script>
+        $(document).ready(function () {
+
+            var myCheckbox;
+            var mySelectbox;
+
+            $(".selectbox").change(function () {
+                var value = $(this).val();
+                mySelectbox = value;
+                getUniversities();
+            });
+
+
+            $(".checkbox").change(function () {
+                if (this.checked) {
+                    var value = $(this).val();
+                    myCheckbox = value;
+                    getUniversities();
+                }
+                else {
+                    myCheckbox = 0;
+                    getUniversities();
+                }
+            });
+
+            var getUniversities = function () {
+                $.ajax({
+                    dataType: "html",
+                    type: "GET",
+                    url: "/Universities/Partial_Universities",
+                    data: {
+                        "typeValue": myCheckbox,
+                        "cityValue": mySelectbox
+                    },
+                    success: function (data) {
+                        $("#universities").html(data);
+                    }
+                });
+            };
+
+            getUniversities();
+
+
+        });
+    </script>
+
+}

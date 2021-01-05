@@ -19,8 +19,50 @@ using MyProject.Entities.DTO.AppUserDTO;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Areas\Admin\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.UniversityTypeDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 4 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Areas\Admin\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.UniversityDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Areas\Admin\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.YosQuestionsDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 6 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Areas\Admin\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.YosQuotaDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 7 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Areas\Admin\Views\_ViewImports.cshtml"
+using MyProject.Entities.DTO.BasePointDTO;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\Areas\Admin\Views\_ViewImports.cshtml"
+using MyProject.WEB.Areas.Admin.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6dc4d86ce0d008a73f191a45d818fd99b6778174", @"/Areas/Admin/Views/Shared/Components/NavbarComponents/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7a4f587e9e2888d089c567a350103d8cd8a8aea0", @"/Areas/Admin/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c1d485a7abe411286d8c6ae672979995e6ea7aec", @"/Areas/Admin/Views/_ViewImports.cshtml")]
     public class Areas_Admin_Views_Shared_Components_NavbarComponents_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<string>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -62,7 +104,7 @@ using MyProject.Entities.DTO.AppUserDTO;
 
     <!--logo start-->
     ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6dc4d86ce0d008a73f191a45d818fd99b67781745486", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6dc4d86ce0d008a73f191a45d818fd99b67781746793", async() => {
                 WriteLiteral("Yös <span class=\"lite\">Admin Panel</span>");
             }
             );
@@ -142,7 +184,7 @@ using MyProject.Entities.DTO.AppUserDTO;
                 <a data-toggle=""dropdown"" class=""dropdown-toggle"" href=""#"">
                     <span class=""profile-ava"">
                         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6dc4d86ce0d008a73f191a45d818fd99b67781749752", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "6dc4d86ce0d008a73f191a45d818fd99b677817411059", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -174,7 +216,7 @@ using MyProject.Entities.DTO.AppUserDTO;
 
                     <li>
                         ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6dc4d86ce0d008a73f191a45d818fd99b677817411553", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6dc4d86ce0d008a73f191a45d818fd99b677817412861", async() => {
                 WriteLiteral("<i class=\"icon_key_alt\"></i> Log Out");
             }
             );
