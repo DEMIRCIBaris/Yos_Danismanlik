@@ -14,7 +14,6 @@ namespace MyProject.DataAccess.Concrete.EntityFramework.Mapping
             builder.HasKey(i=>i.Id);
             builder.Property(i => i.Id).UseIdentityColumn();
             builder.Property(i => i.Name).HasMaxLength(300).IsRequired();
-            builder.HasMany(i => i.Users);
             builder.HasOne(i => i.City).WithMany(i=>i.Universities).HasForeignKey(i=>i.CityId);
             builder.HasOne(i => i.UniversityType).WithMany(i => i.Universities).HasForeignKey(i => i.UniversityTypeId);
         }

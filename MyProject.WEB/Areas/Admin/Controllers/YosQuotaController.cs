@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using MyProject.Bussiness.Abstract;
 using MyProject.Bussiness.Concrete;
+using MyProject.Bussiness.Contants;
 using MyProject.Entities.Concrete;
 using MyProject.Entities.DTO.YosQuotaDTO;
 using System;
@@ -11,6 +13,7 @@ using System.Threading.Tasks;
 namespace MyProject.WEB.Areas.Admin.Controllers
 {
     [AutoValidateAntiforgeryToken]
+    [Authorize(Roles = RolesMessages.Admin)]
     [Area("Admin")]
     public class YosQuotaController : Controller
     {

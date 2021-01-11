@@ -1,4 +1,4 @@
-﻿@model List<UniversityGetDto>
+﻿
 
 <main id="main" class="gecici-background">
 
@@ -8,76 +8,105 @@
 
             <h2 class="section-title">Profil</h2>
             <div>
-                Hoşgeldiniz ...
+                Hoşgeldiniz @ViewBag.Name &emsp; <button class="btn btn-sm btn-outline-dark"><a asp-action="Settings" ><i class="fas fa-cog"></i></a></button>
             </div><br>
-            <p>Takip etmek istediğiniz Üniversiteleri bulup, takibe alınız.</p>
+            <p id="myButton2">Takip etmek istediğiniz Üniversiteleri bulup, takibe alınız.</p>
 
             <div class="form-row">
-                <div class="col-md-6 mb-3">
-                    <form class="form-inline">
-                        <i class="fas fa-search" aria-hidden="true"></i>
-                        <input class="form-control form-control-sm w-75" type="text" placeholder="Search"
-                               aria-label="Search">
-                    </form>
-
+                <div class="col-md-12 mb-3">
+                    <div class="input-group flex-nowrap">
+                        <span class="input-group-text" id="addon-wrapping"><i class="fas fa-filter"></i></span>
+                        <input type="text" class="form-control" placeholder="Search" id="search" aria-label="Username" aria-describedby="addon-wrapping">
+                    </div>
                     <br>
 
-                    <div class="myscroll">
+                    <div id="universities"></div>
 
-                        @if (Model.Count() == 0)
-                        {
-                            <p class="text-danger"><i class="fas fa-times mr-2"></i> Herhangi bir üniversite bulunamamıştır</p>
-                        }
-                        else
-                        {
-                            <table class="table table-light table-sm table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Üniversite Logosu</th>
-                                        <th>Üniversite Adı</th>
-                                        <th>Şehir</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody class="my-auto">
-                                    @foreach (var type in Model)
-                                    {
-                                        <tr>
-                                            <td class="align-middle">
-                                                <img width="75" height="75" src="~/Image/@type.PictureUrl" alt="Alternate Text" />
-                                            </td>
-                                            <td class="align-middle">@type.Name</td>
-                                            <td class="align-middle">@type.City.Name</td>
-                                            <td class="align-middle">
-                                                <a class="btn btn-primary btn-sm my-1" target="_blank" href=""><i class="fas fa-edit mr-1"></i>Ekle</a>
-                                            </td>
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
-                        }
-
-                    </div>
-                </div>
-
-                <div class="col-md-6 mb-3 mt-2">
-                    <br><br>
-
-                    <div class="choicetable">
-
-                    </div>
 
                 </div>
-
             </div>
-
-
-
-
-
+        </div>
     </section><!-- End Skills Section -->
-
-
-
-
 </main><!-- End #main -->
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+
+            var mySearch;
+
+            //Add Button Operations
+            var addButton = function () {
+                $(".addButton").click(function () {
+                    var id = $(this).attr("data-id");
+                    $(this).html('<div class="spinner-border text-white" role="status"></div>');
+
+                    $.ajax({
+                        dataType: "html",
+                        type: "GET",
+                        url: "/Profile/SelectUniversity",
+                        data: {
+                            "universityId": id,
+                        },
+                        success: function (data) {
+                            getUniversities();
+                        }
+                    });
+
+                });
+            };
+
+            //Delete Button Operations
+            var deleteButton = function () {
+                $(".deleteButton").click(function () {
+                    var id = $(this).attr("data-id");
+
+                    $.ajax({
+                        dataType: "html",
+                        type: "GET",
+                        url: "/Profile/PopUniversity",
+                        data: {
+                            "universityId": id,
+                        },
+                        success: function (data) {
+                            getUniversities();
+                        }
+                    });
+
+                });
+            };
+
+
+            $("#search").keyup(function () {
+                var value = $(this).val();
+                mySearch = value.toLowerCase();
+                getUniversities();
+            });
+
+            var getUniversities = function () {
+                $.ajax({
+                    dataType: "html",
+                    type: "GET",
+                    url: "/Profile/PartialProfileUniversities",
+                    data: {
+                        "search": mySearch,
+                    },
+                    success: function (data) {
+                        $("#universities").html(data);
+                    },
+                    complete: function () {
+                        addButton();
+                        deleteButton();
+                    }
+                });
+            };
+
+            getUniversities();
+
+
+
+
+        });
+    </script>
+
+}

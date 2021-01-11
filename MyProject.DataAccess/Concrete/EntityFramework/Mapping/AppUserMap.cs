@@ -13,8 +13,6 @@ namespace MyProject.DataAccess.Concrete.EntityFramework.Mapping
         {
             builder.Property(i => i.Name).HasMaxLength(100);
             builder.Property(i => i.Surname).HasMaxLength(100);
-
-            builder.HasMany(i => i.Universities);
         }
     }
 }

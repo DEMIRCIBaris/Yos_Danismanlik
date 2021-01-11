@@ -45,7 +45,7 @@ namespace MyProject.WEB.Controllers
                     if (roles.Contains("Admin"))
                         return RedirectToAction("Index", "Home",new { area="Admin" });
                     else
-                        return RedirectToAction("Index", "Home", new { area = "Member" });
+                        return RedirectToAction("Index", "Static");
 
                 }
                 else

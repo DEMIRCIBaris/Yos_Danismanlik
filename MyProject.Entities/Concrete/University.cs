@@ -17,7 +17,7 @@ namespace MyProject.Entities.Concrete
 
         public string URL { get; set; }
 
-        public List<AppUser> Users { get; set; }
+        public List<UserUniversity> UsersUniversities { get; set; }
 
         public int CityId { get; set; }
         public City City { get; set; }

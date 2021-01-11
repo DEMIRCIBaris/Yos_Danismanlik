@@ -1,8 +1,6 @@
 ﻿using MyProject.Entities.Concrete;
 using MyProject.Entities.Concrete.IdentityLibraryEntites;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace MyProject.DataAccess.Abstract
 {
@@ -10,5 +8,9 @@ namespace MyProject.DataAccess.Abstract
     {
         List<University> GetUniversityListByStudentId(int studentId);
         int UserCount();
+        List<AppUser> GetList();
+        void Update(AppUser appUser);
+        AppUser GetUserWithUniversities(int userId);
+        void DeleteUserUniversity(int userId, int universityId);
     }
 }

@@ -186,6 +186,8 @@ C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3
 C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Home\LogIn.cshtml.g.cs
 C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
 C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Index.cshtml.g.cs
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Profile\Settings.cshtml.g.cs
+C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Profile\_PartialProfileUniversities.cshtml.g.cs
 C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\FooterComponents\Default.cshtml.g.cs
 C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\NavbarComponents\Default.cshtml.g.cs
 C:\Users\Barış DEMİRCİ\Desktop\MyProject\MyProject.WEB\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginLayout.cshtml.g.cs

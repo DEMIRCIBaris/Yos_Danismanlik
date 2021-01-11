@@ -8,7 +8,7 @@ using MyProject.Entities.Concrete;
 
 namespace MyProject.WEB.Controllers
 {
-    [Authorize(RolesMessages.Admin)]
+    //[Authorize("Admin")]
     public class ConfigureController : Controller
     {
         private readonly ICityService cityService;

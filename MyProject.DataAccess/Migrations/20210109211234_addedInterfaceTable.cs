@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MyProject.DataAccess.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class addedInterfaceTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -49,6 +49,79 @@ namespace MyProject.DataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "basePoints",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Department = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    FirstCities = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    SecondCities = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    ThirdCities = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_basePoints", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Cities",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cities", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UniversityTypes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UniversityTypes", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "yosQuestions",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DocumentUrl = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_yosQuestions", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "YosQuotas",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UniversityName = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
+                    Departments = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Time = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false),
+                    Quota = table.Column<string>(type: "nvarchar(10)", maxLength: 10, nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_YosQuotas", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -157,6 +230,62 @@ namespace MyProject.DataAccess.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Universities",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(300)", maxLength: 300, nullable: false),
+                    PictureUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    BasvuruTarih = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    SinavTarihi = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    SonucTarihi = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    URL = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CityId = table.Column<int>(type: "int", nullable: false),
+                    UniversityTypeId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Universities", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Universities_Cities_CityId",
+                        column: x => x.CityId,
+                        principalTable: "Cities",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Universities_UniversityTypes_UniversityTypeId",
+                        column: x => x.UniversityTypeId,
+                        principalTable: "UniversityTypes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UsersUniversities",
+                columns: table => new
+                {
+                    UsersId = table.Column<int>(type: "int", nullable: false),
+                    UniversitiesId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UsersUniversities", x => new { x.UsersId, x.UniversitiesId });
+                    table.ForeignKey(
+                        name: "FK_UsersUniversities_AspNetUsers_UsersId",
+                        column: x => x.UsersId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_UsersUniversities_Universities_UniversitiesId",
+                        column: x => x.UniversitiesId,
+                        principalTable: "Universities",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -195,6 +324,21 @@ namespace MyProject.DataAccess.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Universities_CityId",
+                table: "Universities",
+                column: "CityId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Universities_UniversityTypeId",
+                table: "Universities",
+                column: "UniversityTypeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_UsersUniversities_UniversitiesId",
+                table: "UsersUniversities",
+                column: "UniversitiesId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -215,10 +359,31 @@ namespace MyProject.DataAccess.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "basePoints");
+
+            migrationBuilder.DropTable(
+                name: "UsersUniversities");
+
+            migrationBuilder.DropTable(
+                name: "yosQuestions");
+
+            migrationBuilder.DropTable(
+                name: "YosQuotas");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Universities");
+
+            migrationBuilder.DropTable(
+                name: "Cities");
+
+            migrationBuilder.DropTable(
+                name: "UniversityTypes");
         }
     }
 }

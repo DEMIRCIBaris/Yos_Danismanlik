@@ -33,6 +33,8 @@ namespace MyProject.Bussiness.Extensions.DIResolvers
             services.AddScoped<IBasePointDal, EfBasePointDal>();
             services.AddScoped<IBasePointService, BasePointService>();
 
+            services.AddScoped<IMailService, GoogleMailService>();
+
         }
     }
 }

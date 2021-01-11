@@ -1,1 +1,26 @@
-﻿<h1>Kayıt</h1>
+﻿@model List<UserGetDto>
+
+    <table class="table table-sm table-hover">
+        <thead>
+            <tr>
+                <th>İsim</th>
+                <th>Soyisim</th>
+                <th>Kullanıcı Adı</th>
+                <th>E-mail</th>
+                <th>Telefon Numarası</th>
+            </tr>
+        </thead>
+        <tbody class="my-auto">
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td class="align-middle">@user.Name</td>
+                    <td class="align-middle">@user.Surname</td>
+                    <td class="align-middle">@user.UserName</td>
+                    <td class="align-middle">@user.Email</td>
+                    <td class="align-middle">@user.PhoneNumber</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+

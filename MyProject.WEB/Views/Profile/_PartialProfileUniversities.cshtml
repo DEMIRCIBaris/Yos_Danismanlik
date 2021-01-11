@@ -1,0 +1,51 @@
+﻿@model List<GetViewModelUniversity>
+<div class="myscroll">
+
+    @if (Model.Count() == 0)
+    {
+        <p class="text-danger"><i class="fas fa-times mr-2"></i> Herhangi bir üniversite bulunamamıştır</p>
+    }
+    else
+    {
+       
+        <table class="table table-light table-bordered table-striped table-xs table-hover border-top-0">
+            <thead>
+                <tr>
+                    <th style="position:sticky;top:0;background-color:#E9E8E6" class="border-top-0 text-center">Üniversite Logosu</th>
+                    <th style="position:sticky;top:0;background-color:#E9E8E6" class="border-top-0 text-center">Üniversite Adı</th>
+                    <th style="position:sticky;top:0;background-color:#E9E8E6" class="border-top-0 text-center">Şehir</th>
+                    <th style="position:sticky;top:0;background-color:#E9E8E6" class="border-top-0 text-center">Başvuru Tarihi</th>
+                    <th style="position:sticky;top:0;background-color:#E9E8E6" class="border-top-0 text-center">Sınav Tarihi</th>
+                    <th style="position:sticky;top:0;background-color:#E9E8E6" class="border-top-0 text-center">Sonuç Tarihi</th>
+                    <th style="position:sticky;top:0;background-color:#E9E8E6" class="border-top-0 text-center"></th>
+                </tr>
+            </thead>
+            <tbody class="my-auto">
+                @foreach (var type in Model)
+                {
+                    <tr>
+                        <td class="align-middle text-center">
+                            <img width="75" height="75" src="~/Image/@type.PictureUrl" alt="Alternate Text" />
+                        </td>
+                        <td class="align-middle text-center">@type.Name</td>
+                        <td class="align-middle text-center">@type.City.Name</td>
+                        <td class="align-middle text-center">@type.BasvuruTarih</td>
+                        <td class="align-middle text-center">@type.SinavTarihi</td>
+                        <td class="align-middle text-center">@type.SonucTarihi</td>
+                        <td class="align-middle text-center">
+                            @if (type.IsAdded)
+                            {
+                                <button class="btn btn-danger btn-sm my-1 deleteButton" data-id="@type.Id"><i class="fas fa-ban mr-2"></i>Çıkar</button>
+                            }
+                            else
+                            {
+                                <button class="btn btn-primary btn-sm my-1 addButton" data-id="@type.Id"><i class="fas fa-edit mr-2"></i>Ekle</button>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+</div>

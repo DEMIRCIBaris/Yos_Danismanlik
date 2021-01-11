@@ -19,21 +19,6 @@ namespace MyProject.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
-            modelBuilder.Entity("AppUserUniversity", b =>
-                {
-                    b.Property<int>("UniversitiesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UsersId")
-                        .HasColumnType("int");
-
-                    b.HasKey("UniversitiesId", "UsersId");
-
-                    b.HasIndex("UsersId");
-
-                    b.ToTable("AppUserUniversity");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
                     b.Property<int>("Id")
@@ -348,6 +333,21 @@ namespace MyProject.DataAccess.Migrations
                     b.ToTable("UniversityTypes");
                 });
 
+            modelBuilder.Entity("MyProject.Entities.Concrete.UserUniversity", b =>
+                {
+                    b.Property<int>("UsersId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UniversitiesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UsersId", "UniversitiesId");
+
+                    b.HasIndex("UniversitiesId");
+
+                    b.ToTable("UsersUniversities");
+                });
+
             modelBuilder.Entity("MyProject.Entities.Concrete.YosQuestions", b =>
                 {
                     b.Property<int>("Id")
@@ -399,21 +399,6 @@ namespace MyProject.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("YosQuotas");
-                });
-
-            modelBuilder.Entity("AppUserUniversity", b =>
-                {
-                    b.HasOne("MyProject.Entities.Concrete.University", null)
-                        .WithMany()
-                        .HasForeignKey("UniversitiesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("MyProject.Entities.Concrete.IdentityLibraryEntites.AppUser", null)
-                        .WithMany()
-                        .HasForeignKey("UsersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -486,9 +471,38 @@ namespace MyProject.DataAccess.Migrations
                     b.Navigation("UniversityType");
                 });
 
+            modelBuilder.Entity("MyProject.Entities.Concrete.UserUniversity", b =>
+                {
+                    b.HasOne("MyProject.Entities.Concrete.University", "University")
+                        .WithMany("UsersUniversities")
+                        .HasForeignKey("UniversitiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyProject.Entities.Concrete.IdentityLibraryEntites.AppUser", "AppUser")
+                        .WithMany("UsersUniversities")
+                        .HasForeignKey("UsersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("University");
+                });
+
             modelBuilder.Entity("MyProject.Entities.Concrete.City", b =>
                 {
                     b.Navigation("Universities");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.IdentityLibraryEntites.AppUser", b =>
+                {
+                    b.Navigation("UsersUniversities");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.University", b =>
+                {
+                    b.Navigation("UsersUniversities");
                 });
 
             modelBuilder.Entity("MyProject.Entities.Concrete.UniversityType", b =>

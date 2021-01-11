@@ -18,8 +18,14 @@ namespace MyProject.Bussiness.Mappers.AutoMapper
             CreateMap<UserAddDto, AppUser>();
             CreateMap<AppUser, UserAddDto>();
 
+            CreateMap<UserUpdateDto, AppUser>();
+            CreateMap<AppUser, UserUpdateDto>();
+
             CreateMap<AppUser, UserSignInDto>();
             CreateMap<UserSignInDto, AppUser>();
+
+            CreateMap<AppUser, UserGetDto>();
+            CreateMap<UserGetDto, AppUser>();
 
             CreateMap<UniversityAddDto, University>();
             CreateMap<University, UniversityAddDto>();

@@ -1,6 +1,7 @@
 ﻿using MyProject.Bussiness.Abstract;
 using MyProject.DataAccess.Abstract;
 using MyProject.Entities.Concrete;
+using MyProject.Entities.Concrete.IdentityLibraryEntites;
 using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
@@ -39,10 +40,20 @@ namespace MyProject.Bussiness.Concrete
             return universities;
         }
 
+        public List<AppUser> GetUniversitiesUsers(int universityId)
+        {
+            return universityDal.GetUniversitiesUsers(universityId);
+        }
+
         public List<University> GetUniversityWithCityAndType()
         {
             var universities = universityDal.GetUniversityWithCityAndType();
             return universities;
+        }
+
+        public List<University> GetUniversityWithCityAndType(string search)
+        {
+            return universityDal.GetUniversityWithCityAndType(search);
         }
 
         public List<University> GetUniversityWithQuery(int typeId, int cityId)

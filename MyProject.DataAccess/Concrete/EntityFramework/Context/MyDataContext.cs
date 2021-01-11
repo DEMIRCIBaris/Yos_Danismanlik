@@ -24,11 +24,13 @@ namespace MyProject.DataAccess.Concrete.EntityFramework.Context
             builder.ApplyConfiguration(new YosQuestionsMap());
             builder.ApplyConfiguration(new YosQuotaMap());
             builder.ApplyConfiguration(new BasePointMap());
+            builder.ApplyConfiguration(new UserUniversityMap());
 
             base.OnModelCreating(builder);
         }
 
         public DbSet<University> Universities { get; set; }
+        public DbSet<UserUniversity> UsersUniversities { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<UniversityType> UniversityTypes { get; set; }
         public DbSet<YosQuestions> yosQuestions { get; set; }

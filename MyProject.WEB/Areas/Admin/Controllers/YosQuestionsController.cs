@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyProject.Bussiness.Abstract;
+using MyProject.Bussiness.Contants;
 using MyProject.Entities.Concrete;
 using MyProject.Entities.DTO.YosQuestionsDTO;
 using System;
@@ -12,6 +14,7 @@ using System.Threading.Tasks;
 namespace MyProject.WEB.Areas.Admin.Controllers
 {
     [AutoValidateAntiforgeryToken]
+    [Authorize(Roles = RolesMessages.Admin)]
     [Area("Admin")]
     public class YosQuestionsController : Controller
     {

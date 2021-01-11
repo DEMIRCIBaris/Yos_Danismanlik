@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyProject.Bussiness.Abstract;
 using MyProject.WEB.Models;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,12 @@ namespace MyProject.WEB.Controllers
     [AutoValidateAntiforgeryToken]
     public class ContactController : Controller
     {
+        private readonly IMailService mailService;
+
+        public ContactController(IMailService mailService)
+        {
+            this.mailService = mailService;
+        }
 
         [HttpGet]
         public IActionResult Index()
@@ -22,24 +29,8 @@ namespace MyProject.WEB.Controllers
         [HttpPost]
         public IActionResult GoMail(ContactModel contactModel)
         {
-            SmtpClient smtpClient = new SmtpClient();
-            smtpClient.Port = 587;
-            smtpClient.Host = "smtp.gmail.com";
-            smtpClient.EnableSsl = true;
-            smtpClient.UseDefaultCredentials = false;
-            smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtpClient.Credentials = new NetworkCredential("bitirmetest26@gmail.com", "bittigitti");
-          
-
-            MailMessage mail = new MailMessage();
-            mail.From = new MailAddress("bitirmetest26@gmail.com", "Blackerback");
-            mail.To.Add("bitirmetest26@gmail.com");
-
-            mail.Subject = contactModel.Subject;
-            mail.IsBodyHtml = true;
-            mail.Body = $"Mesaj Bilgisi: {contactModel.Message} Bu arkadaş tarafından gönderildi: {contactModel.Name}  bu arkadaşın maili de bu: {contactModel.Email}";
-
-            smtpClient.Send(mail);
+            var body= $"Mesaj Bilgisi: {contactModel.Message} Bu arkadaş tarafından gönderildi: {contactModel.Name}  bu arkadaşın maili de bu: {contactModel.Email}";
+            mailService.SendMail("bitirmetest26@gmail.com", body, contactModel.Subject);
 
             TempData["Success"] = true;
 

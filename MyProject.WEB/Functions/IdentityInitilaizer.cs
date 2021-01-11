@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using MyProject.Entities.Concrete.IdentityLibraryEntites;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace MyProject.WEB.Functions

@@ -10,8 +10,8 @@ using MyProject.DataAccess.Concrete.EntityFramework.Context;
 namespace MyProject.DataAccess.Migrations
 {
     [DbContext(typeof(MyDataContext))]
-    [Migration("20201220204556_addOthersTable")]
-    partial class addOthersTable
+    [Migration("20210109211234_addedInterfaceTable")]
+    partial class addedInterfaceTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,21 +20,6 @@ namespace MyProject.DataAccess.Migrations
                 .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.1");
-
-            modelBuilder.Entity("AppUserUniversity", b =>
-                {
-                    b.Property<int>("UniversitiesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UsersId")
-                        .HasColumnType("int");
-
-                    b.HasKey("UniversitiesId", "UsersId");
-
-                    b.HasIndex("UsersId");
-
-                    b.ToTable("AppUserUniversity");
-                });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
                 {
@@ -135,6 +120,38 @@ namespace MyProject.DataAccess.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.BasePoint", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("FirstCities")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("SecondCities")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("ThirdCities")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("basePoints");
                 });
 
             modelBuilder.Entity("MyProject.Entities.Concrete.City", b =>
@@ -287,6 +304,9 @@ namespace MyProject.DataAccess.Migrations
                     b.Property<DateTime>("SonucTarihi")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("URL")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("UniversityTypeId")
                         .HasColumnType("int");
 
@@ -315,19 +335,72 @@ namespace MyProject.DataAccess.Migrations
                     b.ToTable("UniversityTypes");
                 });
 
-            modelBuilder.Entity("AppUserUniversity", b =>
+            modelBuilder.Entity("MyProject.Entities.Concrete.UserUniversity", b =>
                 {
-                    b.HasOne("MyProject.Entities.Concrete.University", null)
-                        .WithMany()
-                        .HasForeignKey("UniversitiesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("UsersId")
+                        .HasColumnType("int");
 
-                    b.HasOne("MyProject.Entities.Concrete.IdentityLibraryEntites.AppUser", null)
-                        .WithMany()
-                        .HasForeignKey("UsersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("UniversitiesId")
+                        .HasColumnType("int");
+
+                    b.HasKey("UsersId", "UniversitiesId");
+
+                    b.HasIndex("UniversitiesId");
+
+                    b.ToTable("UsersUniversities");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.YosQuestions", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("DocumentUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("yosQuestions");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.YosQuota", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Departments")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Quota")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("Time")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<string>("UniversityName")
+                        .IsRequired()
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("YosQuotas");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -400,9 +473,38 @@ namespace MyProject.DataAccess.Migrations
                     b.Navigation("UniversityType");
                 });
 
+            modelBuilder.Entity("MyProject.Entities.Concrete.UserUniversity", b =>
+                {
+                    b.HasOne("MyProject.Entities.Concrete.University", "University")
+                        .WithMany("UsersUniversities")
+                        .HasForeignKey("UniversitiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyProject.Entities.Concrete.IdentityLibraryEntites.AppUser", "AppUser")
+                        .WithMany("UsersUniversities")
+                        .HasForeignKey("UsersId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("University");
+                });
+
             modelBuilder.Entity("MyProject.Entities.Concrete.City", b =>
                 {
                     b.Navigation("Universities");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.IdentityLibraryEntites.AppUser", b =>
+                {
+                    b.Navigation("UsersUniversities");
+                });
+
+            modelBuilder.Entity("MyProject.Entities.Concrete.University", b =>
+                {
+                    b.Navigation("UsersUniversities");
                 });
 
             modelBuilder.Entity("MyProject.Entities.Concrete.UniversityType", b =>

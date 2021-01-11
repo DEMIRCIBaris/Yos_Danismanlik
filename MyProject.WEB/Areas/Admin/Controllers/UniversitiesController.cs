@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using MyProject.Bussiness.Abstract;
+using MyProject.Bussiness.Contants;
 using MyProject.Core.Helpers.FileHelper;
 using MyProject.Entities.Concrete;
 using MyProject.Entities.DTO.UniversityDTO;
@@ -15,6 +17,7 @@ namespace MyProject.WEB.Areas.Admin.Controllers
 {
 
     [AutoValidateAntiforgeryToken]
+    [Authorize(Roles = RolesMessages.Admin)]
     [Area("Admin")]
     public class UniversitiesController : Controller
     {
@@ -22,13 +25,15 @@ namespace MyProject.WEB.Areas.Admin.Controllers
         private readonly IMapperService mapperService;
         private readonly ICityService cityService;
         private readonly IUniversityTypeService universityTypeService;
+        private readonly IMailService mailService;
 
-        public UniversitiesController(ICityService cityService, IUniversityService universityService, IMapperService mapperService, IUniversityTypeService universityTypeService)
+        public UniversitiesController(IMailService mailService,ICityService cityService, IUniversityService universityService, IMapperService mapperService, IUniversityTypeService universityTypeService)
         {
             this.mapperService = mapperService;
             this.universityService = universityService;
             this.cityService = cityService;
             this.universityTypeService = universityTypeService;
+            this.mailService = mailService;
         }
 
         public IActionResult Index()
@@ -95,6 +100,13 @@ namespace MyProject.WEB.Areas.Admin.Controllers
 
             var type = mapperService.Mapper.Map<University>(model);
             universityService.Update(type);
+
+            var users = universityService.GetUniversitiesUsers(model.Id);
+            foreach (var user in users)
+            {
+                mailService.SendMail(user.Email, $"{model.Name} nin Başvuru Tarihi {model.BasvuruTarih} Sınav Tarihi {model.SinavTarihi} Sonuc Tarihi {model.SonucTarihi} olarak güncellendi","Seçtiğiniz Üniversite Bilgileri Güncellendi");
+            }
+
             return RedirectToAction("Index");
         }
     }
